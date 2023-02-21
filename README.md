@@ -3,7 +3,7 @@
 # FusionMotion: Multi-Sensor Asynchronous Fusion for Continuous Occupancy Prediction via Neural-ODE
 </div>
 
-This repo introduces FusionMotion (https://arxiv.org/abs/2206.14451).
+This repo introduces FusionMotion (https://arxiv.org/abs/2302.09585).
 
 ## Demo video
 <!-- <p align="center">
@@ -42,9 +42,7 @@ Occupancy maps are widely recognized as an efficient method for facilitating rob
 
 - SpatialGRU-ODE:  A novel temporal-implicit BEV feature propagation handler that fuses sporadic asynchronous sensor inputs and predicts continuous occupancy flow given any time intervals and any time windows on-demand by training the model only once.
 
-- RV-Lift: A novel representation of range-view LiDAR BEV features for improved instance completion in instance-aware BEV prediction tasks.
-
-- Extensive experiments on two large-scale public datasets, nuScenes and Lyft L5 AV datasets, demonstrate that the proposed method is efficient and effective.
+- Extensive experiments on two large-scale public datasets, nuScenes and Lyft L5 datasets, demonstrate that the proposed method is efficient and effective.
  
 
 ## License
@@ -56,7 +54,13 @@ All assets and code are under the [Apache 2.0 license](https://github.com/synsin
 Please consider citing our paper if the project helps your research with the following BibTex:
 
 ```
-@article{
+@misc{shi2023fusionmotion,
+      title={FusionMotion: Multi-Sensor Asynchronous Fusion for Continuous Occupancy Prediction via Neural-ODE}, 
+      author={Yining Shi and Kun Jiang and Ke Wang and Jiusi Li and Yunlong Wang and Diange Yang},
+      year={2023},
+      eprint={2302.09585},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 ## Acknowledgements
@@ -66,3 +70,4 @@ Thanks to prior excellent open source projects:
 - [FIERY](https://github.com/wayveai/fiery)
 - [ST-P3](https://github.com/OpenPerceptionX/ST-P3)
 - [BEVerse](https://github.com/zhangyp15/BEVerse)
+- [StretchBEV](https://github.com/kaanakan/stretchbev)
