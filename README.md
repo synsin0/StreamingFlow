@@ -65,7 +65,7 @@ Please consider citing our paper if the project helps your research with the fol
 ```
 ## Acknowledgements
 Thanks to prior excellent open source projects:
-- 
+
 - [MotionNet](https://github.com/pxiangwu/MotionNet)
 - [FIERY](https://github.com/wayveai/fiery)
 - [ST-P3](https://github.com/OpenPerceptionX/ST-P3)
