@@ -3,14 +3,22 @@
 # StreamingFlow: Streaming Occupancy Forecasting with Asynchronous Multi-modal Data Streams via Neural Ordinary Differential Equation
 </div>
 
-This repo introduces StreamingFlow.
+This repo introduces StreamingFlow (CVPR2024 poster(hightlight)).
 
-## Demo video
+## Demo videos
+Occupancy forecasting on nuScenes dataset (IoU/VPQ = 53.9/52.7 when evaluated for 4 frames with interval 0.5s).
+[https://github.com/synsin0/StreamingFlow/assets/37300008/ee225603-8434-4825-b912-7f3fc7095c85]
 
+Occupancy forecasting on Lyft dataset (IoU/VPQ = 56.9/55.9 when evaluated for 10 frames with interval 0.2s).
+[https://github.com/synsin0/StreamingFlow/assets/37300008/54232c6c-4ae2-456a-9381-4df5c5624712]
 
+Streaming forecasting: foreseeing the unseen future to 8s (IoU/VPQ = 32.5/29.8 when evaluated for 16 frames with interval 0.5s).
+[https://github.com/synsin0/StreamingFlow/assets/37300008/4fd86c70-b7e5-421e-b297-153cb4a8e477]
+
+Streaming forecasting: temporally dense prediction at 20Hz (IoU/VPQ = 45.3/42.7 when evaluated for 40 frames with interval 0.05s).
+[https://github.com/synsin0/StreamingFlow/assets/37300008/2f67398f-8819-4422-9a50-4f87d0e2c9b3]
 
 ## Framework
-![teaser](sources/streamingflow_intro.png)
 ![teaser](sources/streamingflow_framework.png)
 
 ## Abstract
