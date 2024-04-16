@@ -1,59 +1,35 @@
 <div align="center">   
   
-# FusionMotion: Multi-Sensor Asynchronous Fusion for Continuous Occupancy Prediction via Neural-ODE
+# StreamingFlow: Streaming Occupancy Forecasting with Asynchronous Multi-modal Data Streams via Neural Ordinary Differential Equation
 </div>
 
-This repo introduces FusionMotion (https://arxiv.org/abs/2302.09585).
+This repo introduces StreamingFlow.
 
 ## Demo video
-<!-- <p align="center">
- <a href="https://opendrivelab.github.io/UniAD/">
-    <img alt="Project Page" src="https://img.shields.io/badge/Project%20Page-Open-yellowgreen.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/OpenDriveLab/UniAD/blob/master/LICENSE">
-    <img alt="License: Apache2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/OpenDriveLab/UniAD/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">
-    <img alt="Good first issue" src="https://img.shields.io/github/issues/OpenDriveLab/UniAD/good%20first%20issue" target="_blank" />
-  </a>
-</p> -->
-
-<!-- <h3 align="center">
-  <a href="https://opendrivelab.github.io/UniAD/">project page</a> |
-  <a href="https://arxiv.org/abs/2212.10156">arXiv</a> |
-  <a href="">video</a> 
-</h3> -->
-
-https://user-images.githubusercontent.com/37300008/219949017-5ab8e53b-3dfb-49f2-a33f-e9a8a451b915.mp4
 
 
 
 ## Framework
-![teaser](sources/pipeline.png)
+![teaser](sources/streamingflow_intro.png)
+![teaser](sources/streamingflow_framework.png)
 
 ## Abstract
 
-Occupancy maps are widely recognized as an efficient method for facilitating robot motion planning in static environments. However, for intelligent vehicles, occupancy of both the present and future moments is required to ensure safe driving. In the automotive industry, the accurate and continuous prediction of future occupancy maps in traffic scenarios remains a formidable challenge. This paper investigates multi-sensor spatio-temporal fusion strategies for continuous occupancy prediction in a systematic manner. This paper presents FusionMotion, a novel bird's eye view (BEV) occupancy predictor which is capable of achieving the fusion of asynchronous multi-sensor data and predicting the future occupancy map with variable time intervals and temporal horizons. Remarkably, FusionMotion features the adoption of neural ordinary differential equations on recurrent neural networks for occupancy prediction. FusionMotion learns derivatives of BEV features over temporal horizons, updates the implicit sensor's BEV feature measurements and propagates future states for each ODE step. Extensive experiments on large-scale nuScenes and Lyft L5 datasets demonstrate that FusionMotion significantly outperforms previous methods. In addition, it outperforms the BEVFusion-style fusion strategy on the Lyft L5 dataset while reducing synchronization requirements. 
+Predicting the future occupancy states of the surrounding environment is a vital task for autonomous driving. However, current best-performing single-modality methods or multi-modality fusion perception methods are only able to predict uniform snapshots of future occupancy states and require strictly synchronized sensory data for sensor fusion. We propose a novel framework, StreamingFlow, to lift these strong limitations. StreamingFlow is a novel BEV occupancy predictor that ingests asynchronous multi-sensor data streams for fusion and performs streaming forecasting of the future occupancy map at any future timestamps. By integrating neural ordinary differential equations (N-ODE) into recurrent neural networks, StreamingFlow learns derivatives of BEV features over temporal horizons, updates the implicit sensor's BEV features as part of the fusion process, and propagates BEV states to the desired future time point. It shows good zero-shot generalization ability of prediction, reflected in the interpolation of the observed prediction time horizon and the reasonable inference of the unseen farther future period. Extensive experiments on two large-scale datasets,nuScenes and Lyft L5,  demonstrate that StreamingFlow significantly outperforms previous vision-based, LiDAR-based methods, and shows superior performance compared to state-of-the-art fusion-based methods. 
 
-
-## Contributions
-
-- FusionMotion: A novel and robust multi-sensor asynchronous fusion perception framework for grid-centric perception and prediction that does not fail when a single sensor occasionally fails.  
-
-- SpatialGRU-ODE:  A novel temporal-implicit BEV feature propagation handler that fuses sporadic asynchronous sensor inputs and predicts continuous occupancy flow given any time intervals and any time windows on-demand by training the model only once.
-
-- Extensive experiments on two large-scale public datasets, nuScenes and Lyft L5 datasets, demonstrate that the proposed method is efficient and effective.
  
 
 ## License
 
-All assets and code are under the [Apache 2.0 license](https://github.com/synsin0/FusionMotion/blob/master/LICENSE) unless specified otherwise.
+All assets and code are under the [Apache 2.0 license](https://github.com/synsin0/StreamingFlow/blob/master/LICENSE) unless specified otherwise.
 
 ## Citation
 
 Please consider citing our paper if the project helps your research with the following BibTex:
-
 ```
+to be updated
+```
+<!-- ```
 @misc{shi2023fusionmotion,
       title={FusionMotion: Multi-Sensor Asynchronous Fusion for Continuous Occupancy Prediction via Neural-ODE}, 
       author={Yining Shi and Kun Jiang and Ke Wang and Jiusi Li and Yunlong Wang and Diange Yang},
@@ -62,7 +38,8 @@ Please consider citing our paper if the project helps your research with the fol
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
-```
+``` -->
+
 ## Acknowledgements
 Thanks to prior excellent open source projects:
 
