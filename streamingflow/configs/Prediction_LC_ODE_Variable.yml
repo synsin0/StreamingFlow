@@ -68,10 +68,3 @@ OPTIMIZER:
 
 PRETRAINED:
    LOAD_WEIGHTS: False
-
-
-
-# vehicle_iou : 0.5319308042526245
-# vehicle_pq : 0.49455463886260986
-# vehicle_sq : 0.7524188756942749
-# vehicle_rq : 0.6572863459587097
