@@ -1,0 +1,77 @@
+TAG: 'Prediction_LC_ODE_Variable'
+
+GPUS: [3]
+
+BATCHSIZE: 1
+PRECISION: 16
+EPOCHS: 20
+
+N_WORKERS: 8
+
+DATASET:
+  VERSION: 'trainval'
+
+TIME_RECEPTIVE_FIELD: 3
+N_FUTURE_FRAMES: 4
+
+LIFT:
+  GT_DEPTH: True
+
+GEN:
+  GEN_DEPTH: True
+  GEN_RANGE: True
+  GEN_VOXELS: True
+
+MODEL:
+  USE_TRANSFORMER: False
+  USE_GRU_ODE: True
+  IMPUTE: True
+  FUTURE_PRED:
+    USE_VARIABLE_ODE_STEP: True
+  MODALITY:
+    USE_LIDAR: True
+    USE_RADAR: False
+    USE_CAMERA: True
+  ENCODER:
+    NAME: 'efficientnet-b4'
+    USE_DEPTH_DISTRIBUTION: True
+  LIDAR:
+    USE_RANGE: False
+    USE_STPN: False
+    USE_BESTI: False
+  TEMPORAL_MODEL:
+    NAME: 'temporal_block'
+    INPUT_EGOPOSE: True
+  BN_MOMENTUM: 0.05
+
+SEMANTIC_SEG:
+  PEDESTRIAN:
+    ENABLED: False
+  HDMAP:
+    ENABLED: False
+
+INSTANCE_FLOW:
+  ENABLED: True
+
+PROBABILISTIC:
+  ENABLED: True
+  METHOD: 'GAUSSIAN'
+
+PLANNING:
+  ENABLED: False
+
+FUTURE_DISCOUNT: 0.95
+
+OPTIMIZER:
+  LR: 2e-4
+
+
+PRETRAINED:
+   LOAD_WEIGHTS: False
+
+
+
+# vehicle_iou : 0.5319308042526245
+# vehicle_pq : 0.49455463886260986
+# vehicle_sq : 0.7524188756942749
+# vehicle_rq : 0.6572863459587097
