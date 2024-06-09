@@ -58,7 +58,7 @@ We follow the [ST-P3](https://github.com/OpenDriveLab/ST-P3) setup and [bevfusio
 
 | Settings        | Image | LiDAR | ODE Step | IoU | VPQ | config  | checkpoint |
 | ------------- | ------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| past_1s, future_2s | Effi-B4-224x480-2Hz   | Spconv8x-0050-5Hz     | variable    | 53.7    | 50.7 | [config](streamingflow\configs\Prediction_LC_ODE_Variable.yml) | [ckpt](https://cloud.tsinghua.edu.cn/f/0da4c5bd409a4a7bb80b/?dl=1) |
+| past_1s, future_2s | Effi-B4-224x480-2Hz   | Spconv8x-0050-5Hz     | variable    | 53.7    | 50.7 | [config](streamingflow/configs/Prediction_LC_ODE_Variable.yml) | [ckpt](https://cloud.tsinghua.edu.cn/f/0da4c5bd409a4a7bb80b/?dl=1) |
 
 Train command:  
 ```python
