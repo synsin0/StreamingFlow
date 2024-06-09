@@ -60,12 +60,6 @@ class streamingflow(nn.Module):
         # Encoder
             self.encoder = Encoder(cfg=self.cfg.MODEL.ENCODER, D=self.depth_channels)
         
-        # if self.use_camera and self.use_lidar:
-        #     self.lc_conv_fuser = ConvFuser(in_channels=[self.cfg.MODEL.ENCODER.OUT_CHANNELS,self.cfg.MODEL.ENCODER.OUT_CHANNELS], out_channels=self.cfg.MODEL.ENCODER.OUT_CHANNELS)
-        
-        # self.stpn_range_conv_fuser = ConvFuser(in_channels=[self.cfg.MODEL.ENCODER.OUT_CHANNELS,self.cfg.MODEL.ENCODER.OUT_CHANNELS], out_channels=self.cfg.MODEL.ENCODER.OUT_CHANNELS)
-        # if not self.cfg.MODEL.USE_TRANSFORMER:
-
         if self.use_camera:
             # Temporal model
             temporal_in_channels = self.encoder_out_channels
