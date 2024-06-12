@@ -147,7 +147,7 @@ to be updated
 
 ## Acknowledgements
 Thanks to prior excellent open source projects:
-
+- [GRU_ODE_Bayes](https://github.com/edebrouwer/gru_ode_bayes)
 - [MotionNet](https://github.com/pxiangwu/MotionNet)
 - [FIERY](https://github.com/wayveai/fiery)
 - [ST-P3](https://github.com/OpenDriveLab/ST-P3)
