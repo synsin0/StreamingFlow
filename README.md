@@ -131,19 +131,16 @@ All assets and code are under the [Apache 2.0 license](https://github.com/synsin
 ## Citation
 
 Please consider citing our paper if the project helps your research with the following BibTex:
+
 ```
-to be updated
-```
-<!-- ```
-@misc{shi2023StreamingFlow,
-      title={StreamingFlow: Multi-Sensor Asynchronous Fusion for Continuous Occupancy Prediction via Neural-ODE}, 
-      author={Yining Shi and Kun Jiang and Ke Wang and Jiusi Li and Yunlong Wang and Diange Yang},
-      year={2023},
-      eprint={2302.09585},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{shi2024streamingflow,
+  title={StreamingFlow: Streaming Occupancy Forecasting with Asynchronous Multi-modal Data Streams via Neural Ordinary Differential Equation},
+  author={Shi, Yining and Jiang, Kun and Wang, Ke and Li, Jiusi and Wang, Yunlong and Yang, Mengmeng and Yang, Diange},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={14833--14842},
+  year={2024}
 }
-``` -->
+```
 
 ## Acknowledgements
 Thanks to prior excellent open source projects:
